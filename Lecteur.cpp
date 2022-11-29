@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Lecteur.h"
 
-
     Person::Person(std::string firstname, std::string lastname) : _firstname(firstname), _lastname(lastname) {
     }
 
@@ -13,6 +12,6 @@
         return _lastname;
     }
 
-    std::string getFullName(const Person &p) {
-        return p.firstname() + " " + p.lastname();
-    }
+    std::string getFullName(Person p) {
+        return std::string (p.firstname() + " " + std::string(p.lastname()));
+    };
