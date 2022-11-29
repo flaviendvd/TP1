@@ -7,8 +7,8 @@
                 std::string firstname() const;
                 std::string lastname() const;
                 std::string getFullName() const;
-    
-             private:
+            
+            private:
                 std::string _firstname;
                 std::string _lastname;
   };

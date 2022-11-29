@@ -12,6 +12,6 @@
         return _lastname;
     }
 
-    std::string getFullName(Person p) {
-        return std::string (p.firstname() + " " + std::string(p.lastname()));
+    std::string Person::getFullName()const {
+        return std::string (firstname() + " " + std::string(lastname()));
     };
