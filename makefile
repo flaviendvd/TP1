@@ -1,10 +1,12 @@
+
 # Makefile with dependencies management (Q4)
 
 CXX        = g++
 CXXFLAGS   = -Wall  -std=c++2a
 DEPFLAGS   = -MMD
 LDFLAGS    =
-SRCS       = Lecteur.cpp main.cpp
+SRCS       = Lecteur.cpp date.cpp main.cpp
+
 OBJS       = $(SRCS:.cpp=.o)
 TARGET     = app
 DEPS	   = $(OBJS:.o=.d)
