@@ -4,7 +4,7 @@
 
 
 
-Date::Date(int month, int day) : _month(month), _day(day) {
+Date::Date(int year, int month, int day) : _year(year), _month(month), _day(day) {
     bool status = isDate(month, day);
     assert(status && "Date is not valid");
 }
