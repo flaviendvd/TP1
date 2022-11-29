@@ -23,7 +23,7 @@ private:
    
 };
 
-bool isDate(int month, int day);
+bool isDate(int year, int month, int day);
 int getDaysInMonth(int month);
 int dayOfYear(Date d);
 std::string toString(Date d);

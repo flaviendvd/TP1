@@ -8,6 +8,9 @@ Date::Date(int month, int day) : _month(month), _day(day) {
     bool status = isDate(month, day);
     assert(status && "Date is not valid");
 }
+int Date::year() const {
+    return _year;
+}
 
 int Date::month() const {
 	return _month;
@@ -16,15 +19,20 @@ int Date::month() const {
 int Date::day() const {
 	return _day;
 }
+void Date::updateYear(int year){
+    bool status = isDate(year, _month, _day);
+    assert(status==true && "New year is not valid");
+    _year = year;
+}
 
 void Date::updateMonth(int month) {
-    bool status = isDate(month, _day);
+    bool status = isDate(_year, month, _day);
     assert(status==true && "New month is not valid");
     _month = month;
 }
 
 void Date::updateDay(int day) {
-    bool status = isDate(_month, day);
+    bool status = isDate(_year, _month, day);
     assert(status==true && "New day is not valid");
     _day = day;
 }
