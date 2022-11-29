@@ -4,12 +4,12 @@
 class Livre
 {
 private:
-    std::string _auteur;
-    std::string _titre;
-    Genres _genre;
-    Langues _langue;
-    int _isbn;
-    Date _datePublication;
+    std::string _auteur const;
+    std::string _titre const;
+    Genres _genre const;
+    Langues _langue const;
+    int _isbn const;
+    Date _datePublication const;
 public:
     Livre(std::string auteur, std::string titre, Genres genre, Langues langue, int isbn, Date datePublication);
     enum Genres{
@@ -19,8 +19,4 @@ public:
         Français, Anglais, Espagnol, Allemand, Russe, Chinois, Japonais, Portugais, Polonnais
     };
 };
-
-livre::livre(/* args */)
-{
-}
 
