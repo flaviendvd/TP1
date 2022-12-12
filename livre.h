@@ -1,10 +1,16 @@
-#include "date.h"
 #include <iostream>
+#include "date.h"
+#include <string>
 
-class Livre {
+class Livre
+{
+    /*public:
+      enum Genres{
+        Science_fiction, Action, Policier, Romance, Histoire, Realiste, Fantastique, Drama
+    };*/
 public:
-  Livre(std::string auteur, std::string titre, std::string genre, std::string langue,
-    std::string isbn, std::string datePublication);
+    
+    Livre(std::string auteur, std::string titre, std::string genres, std::string langues, std::string isbn, std::string datePublication);
     std::string auteur() const;
     std::string titre() const;
     std::string genres() const;
@@ -25,25 +31,7 @@ private:
     std::string _datePublication;
 };
 
-  /*enum Genres {
-    Science_fiction,
-    Action,
-    Policier,
-    Romance,
-    Histoire,
-    Realiste,
-    Fantastique,
-    Drama
-  };
-  enum Langues {
-    Francais,
-    Anglais,
-    Espagnol,
-    Allemand,
-    Russe,
-    Chinois,
-    Japonais,
-    Portugais,
-    Polonnais
-  };*/
 
+    /*enum class Langues{
+        Francais, Anglais, Espagnol, Allemand, Russe, Chinois, Japonais, Portugais, Polonnais
+    };*/

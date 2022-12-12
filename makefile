@@ -5,7 +5,7 @@ CXX        = g++
 CXXFLAGS   = -Wall  -std=c++2a
 DEPFLAGS   = -MMD
 LDFLAGS    =
-SRCS       = Lecteur.cpp date.cpp main.cpp
+SRCS       = Lecteur.cpp date.cpp livre.cpp main.cpp
 
 OBJS       = $(SRCS:.cpp=.o)
 TARGET     = main #(app a remettre)

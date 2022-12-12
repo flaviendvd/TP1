@@ -8,8 +8,8 @@
 int main(int argc, char const *argv[]) 
 {
     Person p1("Tchance","Ya");
-    Livre livre1("FLAVIEN","Docteur","Policier","Francais", "9-780-96", "2022/01/28");
-    
+    Livre livre1("FLAVIEN","Docteur","Policier","Francais", "9-780-96", "28/01/2002");
+  
     std::cout << "Lecteur - " << p1.getFullName() << std::endl;
     std::cout << "Livre Emprunté- " << livre1.getFullNameLivre() << std::endl;
     
@@ -24,6 +24,4 @@ int main(int argc, char const *argv[])
     std::cout << "bye." << std::endl;
 
   return 0;
-
-
 }
