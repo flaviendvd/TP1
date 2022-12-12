@@ -8,7 +8,7 @@ LDFLAGS    =
 SRCS       = Lecteur.cpp date.cpp main.cpp
 
 OBJS       = $(SRCS:.cpp=.o)
-TARGET     = app
+TARGET     = main #(app a remettre)
 DEPS	   = $(OBJS:.o=.d)
 
 all: $(TARGET)
