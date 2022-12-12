@@ -12,7 +12,8 @@ int main(int argc, char const *argv[])
   std::cout << "Lecteur - " << p1.getFullName() << std::endl;  
   Date datePublication(2002,7,10);
   Livre livre("Harlen Coben", "Sans un mot", Genres::Policier, Langues::Français, "978-2-7654-0912-0", datePublication);
-  std::cout << livre.getTitre() << livre.getAuteur() << toStringGenre(livre.getGenre()) << toStringLangue(livre.getLangue()) << livre.getISBN() << toString(livre.getDatePublication()) << std::endl;
+  std::cout << "Auteur : " << livre.getAuteur() << "\n" << "Titre : " << livre.getTitre() << "\n" << "Genre : " << toStringGenre(livre.getGenre()) << "\n" << "Langue : " << toStringLangue(livre.getLangue()) << "\n" << "ISBN : " << livre.getISBN() << "\n" << "Date de publication : " <<
+toString(livre.getDatePublication()) << std::endl;
 
   return 0;
 }
