@@ -1,19 +1,15 @@
-#pragma once
 #include <iostream>
 #include "livre.h"
 #include "date.h"
-#include <regex>
-#include <cassert> 
 
-Livre::Livre(std::string auteur, std::string titre, Genres genre, Langues langue, std::string ISBN, Date datePublication){
-  bool status = isISBN(ISBN);
-  assert(status && "ISBN is not valid");
-  _auteur = auteur;
-  _titre = titre;
-   _genre = genre;
-  _langue = langue;
-  _ISBN = ISBN;
-  _datePublication = datePublication;
+Livre::Livre(std::string auteur, std::string titre, Genres genre, Langues langue, int ISBN, Date
+datePublication){
+    _auteur = auteur;
+    _titre = titre;
+    _genre = genre;
+    _langue = langue;
+    _ISBN = ISBN;
+    _datePublication = datePublication;
 }
 
 std::string toStringGenre(Genres g) {
@@ -81,11 +77,4 @@ break;
 default:
 break;
 }
-}
-
-bool isISBN(std::string ISBN){
-  if (regex_match (ISBN, std::regex("^[0-9]{3}(-)[0-9](-)[0-9]{4}(-)[0-9]{4}(-)[0-9]")))
-    return true;
-  else 
-    return false;
 }

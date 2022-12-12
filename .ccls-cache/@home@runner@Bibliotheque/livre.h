@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include "date.h"
 
@@ -17,11 +16,10 @@ private:
   std::string _titre;
   Genres _genre;
   Langues _langue;
-  std::string _ISBN;
+  int _ISBN;
   Date _datePublication;
 public:
-  Livre(std::string auteur, std::string titre, Genres genre, Langues langue, std::string ISBN, Date datePublication);
-  std::string ISBN() const;
+  Livre(std::string auteur, std::string titre, Genres genre, Langues langue, int ISBN, Date datePublication);
   std::string getTitre() const { 
         return _titre;}
 	std::string getAuteur() const { 
@@ -32,11 +30,9 @@ public:
 	    return _genre;}
 	Date getDatePublication() const { 
 	    return _datePublication;}
-	std::string getISBN() const { 
+	int getISBN() const { 
 	    return _ISBN;}
 };
     
 std::string toStringGenre(Genres g);
 std::string toStringLangue(Langues l);
-
-bool isISBN(std::string ISBN);
